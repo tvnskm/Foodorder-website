@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>user report page</title>
+</head>
+
+<body>
+<h1>
+user Report page</h1>
+<br/>
+<table border="2">
+
+<tr>
+    <th>first name</th>
+    <th>last name</th>
+    <th>email</th>
+    <th>password</th>
+
+</tr>
+
+{% for s in allusers %}
+<tr>
+<td>{{s.fname}}</td>
+<td>{{s.lname}}</td>
+<td>{{s.email}}</td>
+<td>{{s.password}}</td>
+
+
+</tr>
+<br/>
+
+{% endfor %}
+
+{% if allstudents %}
+
+
+
+{% endif %}
+
+
+
+</body>
+</html>

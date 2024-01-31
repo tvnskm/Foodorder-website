@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        body {
+            background-color: #344a72;
+            font-family: "Roboto", sans-serif;
+          }
+          
+          
+          
+          .signup-box {
+            width: 360px;
+            height: 620px;
+            margin: auto;
+            border-radius: 3px;
+            background-color: white;
+          }
+          
+          h1 {
+            text-align: center;
+            padding-top: 15px;
+          }
+          
+          h4 {
+            text-align: center;
+          }
+          
+          form {
+            width: 300px;
+            margin-left: 20px;
+          }
+          
+          form label {
+            display: flex;
+            margin-top: 20px;
+            font-size: 18px;
+          }
+          
+          form input {
+            width: 100%;
+            padding: 7px;
+            border: none;
+            border: 1px solid gray;
+            border-radius: 6px;
+            outline: none;
+          }
+          input[type="button"] {
+            width: 320px;
+            height: 35px;
+            margin-top: 20px;
+            border: none;
+            background-color: #49c1a2;
+            color: white;
+            font-size: 18px;
+          }
+          p {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 15px;
+          }
+          .para-2 {
+            text-align: center;
+            color: white;
+            font-size: 15px;
+            margin-top: -10px;
+          }
+          .para-2 a {
+            color: #49c1a2;
+          }
+        </style>
+          
+    
+</head>
+<body>
+    <div class="signup-box">
+    <h1>Sign Up</h1>
+    <h4>It's free and only takes a minute</h4>
+    <form>
+        <label >First Name</label><input type="text" required> 
+        
+        
+        <label >Last Name</label><input type="text" required>
+       
+        <label >Email</label><input type="email" required>
+      
+        <label >Password</label><input type="password" id="password" required>
+       
+        <label >Confirm <br> Password</label><input type="password" id="confirm_password" required>
+        <button type="submit" class="pure-button pure-button-primary" style=" 
+          width: 320px;
+        height: 35px;
+        margin-top: 20px;
+        border: none;
+        background-color: #49c1a2;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        ">Signup</button>
+       
+
+    </form>
+    <script>
+      var password = document.getElementById("password"), 
+      confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+      
+    </script>
+</div>
+    <p class="para-2">Already have account? <a href="login.html">Login here</a></p>
+
+
+    
+</body>
+</html>
