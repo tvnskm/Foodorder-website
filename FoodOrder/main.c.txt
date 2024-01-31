@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct {
+    char* name;
+    char* tag;
+    int price;
+    int inCart;
+} Product;
+
+int main() {
+    Product products[] = {
+        {"chicken 65", "chicken65", 250, 0},
+        {"chilli chicken", "chicken_chilli", 275, 0},
+        {"chicken lollipop", "chicken lollipop", 275, 0},
+        {"chicken tikka", "CHICKEN TIKKA", 250, 0},
+        {"chicken majestic", "chicken majestic", 250, 0},
+        {"veg manchurian", "vegmanchurian", 165, 0},
+        {"spring rolls", "spring rolls", 150, 0},
+        {"Paneer 65", "paneer 65", 250, 0},
+        {"Paneeer Tikka", "paneer tikka", 250, 0},
+        {"Mushroom manchuria", "mushroom manchuria", 200, 0},
+        {"Tomato soup", "tomato-soup-7", 149, 0},
+        {"Mojito", "mojito", 149, 0},
+        {"Lassi", "lassi", 99, 0},
+        {"Ferroro automatic", "ferroro automatic", 149, 0},
+        {"Pista", "pista", 199, 0},
+        {"strawbeery", "strawberry-milkshake", 79, 0},
+        {"chicken soup", "chicken soup", 149, 0},
+        {"mushroom soup", "mushroom soup", 149, 0},
+        {"mochi", "mochi", 149, 0},
+        {"Rose milk", "rose-milk", 99, 0},
+        {"Falood", "", 0, 0}
+    };
+
+    return 0;
+}

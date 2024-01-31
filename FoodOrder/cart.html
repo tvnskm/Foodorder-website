@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head><meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+
+            }
+
+            body{
+                background-color:white;
+                font-family: 'Poppins',sans-serif;
+
+            }
+            
+            nav a{
+                color: goldenrod
+            }
+        
+       
+            button{
+                background-color: red;
+                border-color: white;
+                color: azure;
+                font-size: 16px;
+                font-weight: 600;
+                border-radius: 5px;
+                width: 150px;
+                height: 25px;
+                transition: 00.5s all ease;
+                cursor: pointer;
+                align-items: center;
+            }
+            button:hover{
+             background: green;
+            color: white;
+            transform: scale(1.5);
+                    }
+
+           a{ color: white;
+              text-decoration: none;
+            }
+            
+        
+            .sticky {
+          position: fixed;
+          top: 0;
+          width: 100%;
+          background-color: black;
+          transition: 1s;
+        
+        }
+        .sticky a{
+            color: blanchedalmond;
+        
+        }
+        .sticky span{
+            color:blanchedalmond
+        }
+        .product img{
+            position:static;
+             width: 200px;
+             height: 130px;
+                border-radius: 15px 15px 15PX 15PX ;
+            
+        }
+        .product span{
+            
+            font-size: larger;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+        .product td {
+            width:100px;
+            text-align: center;
+        }
+      
+        .products-container{
+            max-width: 650px;
+            justify-content: center;
+            margin: 0 auto;
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            padding-bottom: 100px;
+        }
+        .product-header
+        {
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            justify-content: flex-start;
+            border-bottom: 4px solid lightgray;
+            margin: 0 auto;
+        }
+        .product-title{
+            width: 55%;
+        }  
+        .price{
+            padding-left: 0px;
+            width: 15%;
+            display: flex;
+            align-items: center;  
+        } 
+        .quantity {width:10%; display: flex;
+            align-items: center; }
+            .total{width:10%; display: flex;
+            align-items: center;padding-left: 70px; }
+        .basketTotalContainer{padding-left: 600px}
+       
+        .s ion-icon{width: 120px;
+            height:50px;
+        color:aliceblue}
+
+            .s {background-color:black}
+        </style>
+    </head>
+    <title>menu</title>
+    <body>
+       
+        <div class="s" id="myHeader">
+            <table width="1510px" style="font-family: 'Courier New', Courier, monospace; text-align: center; letter-spacing: 2px;"cellspacing="0"  >
+                <tr>
+                    <td><a href="home.html"><ion-icon name="home-outline" style="display: inline-block;"></ion-icon></a></td>
+                    <td><A href="menu.html"><button>MENU</button></A></td>
+                    <td style="color: white; font-size:50px; padding-left: 70px; ">CART PAGE</td>
+                    <td> <div class="mad"><button onclick="undisplayCart();deleteItems();delete1();">CLEAR CART</button></div></td>
+                     <td><div class="cart"><a href="cart.html"><Button>CART&nbsp;<span>&nbsp;0</span></a></Button></div></td>
+                </tr>
+            </table>
+        </div>
+        <table>
+        <div class="products-container">
+            <div class="product-header">
+                <h5 class="product-title">PRODUCT</h5>
+                <h5 class="price">PRICE</h5>
+                <h5 class="quantity">QUANTITY</h5>
+                <h5 class="total">TOTAL</h5>
+            </div>
+            <div class="products">
+            </div>
+        </div>
+    </table>
+    <center><a href="payment.html"><button onclick="brohit1()" style="background-color: green; height: 50px;font-size: 25px;">Payment</button></a></center>
+        <script src="main.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+       <script>
+       window.onscroll = function() {myFunction()};
+        var s = document.getElementById("myHeader");
+        var sticky = s.offsetTop;
+
+        function brohit1(){
+           alert("Proceeding to payment.");
+         }
+       </script>
+       </body>
+      
+</html>

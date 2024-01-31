@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html>
+    <head><meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+
+            }
+
+            body{
+                background-color:white;
+                font-family: 'Poppins',sans-serif;
+
+            }
+            
+            .heading{
+                background-color: black;
+                color: goldenrod;
+                margin-bottom: 30px;
+                padding: 30px 0;
+                text-align: center;
+                width:100%;
+            }
+            
+
+            .heading h1{
+                font-weight: 400;
+                font-size: 30px;
+                letter-spacing: 10px;
+                margin-bottom: 10px;
+            }
+            .heading h3{
+                font-weight: 600;
+                font-size: 22px;
+                letter-spacing: 5px;
+            }
+            nav a{
+                color: goldenrod
+            }
+            .starters{
+                
+                border-radius: 14px;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+                width: 280px;
+                height: 480px;
+                
+                
+            }
+            .starters img{
+                position: static ;
+                width: 280px;
+                height: 200px;
+                border-radius: 15px 15px 0 0;
+            }
+            h1{
+                text-align: center;
+            }
+            .details{
+                padding: 20px 10px;
+                
+            }
+            
+            
+            .details-sub>h5{
+                font-weight: 600;
+                font-size: 18px;
+            }
+            .price{
+                text-align: right;
+            }
+            .details>p{
+                color: grey;
+                font-size: 15px;
+                line-height: 28px;
+                font-weight: 400;
+                align-self: stretch;
+
+            }
+        
+            
+            button{
+                background-color: red;
+                border-color: white;
+                color: azure;
+                font-size: 16px;
+                font-weight: 600;
+                border-radius: 5px;
+                width: 150px;
+                height: 25px;
+                transition: 00.5s all ease;
+                cursor: pointer;
+                align-items: center;
+            }
+            button:hover{
+             background: green;
+            color: white;
+            transform: scale(1.5);
+                    }
+
+                    .al{
+                        padding-left: 50px;
+                    }
+            p{
+                text-align: left;
+            }
+           
+           a{ color: black;
+              text-decoration: none;
+            }
+            
+            .specials{
+                
+                border-radius: 14px;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+                width: 280px;
+                height: 480px;
+                
+            }
+            .specials img{
+                position: static;
+                width: 280px;
+                height: 200px;
+                border-radius: 15px 15px 0 0;}
+
+                .desserts{
+                
+                border-radius: 14px;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+                width: 280px;
+                height: 480px;
+                
+            }
+            .desserts img{
+                position:static;
+                width: 280px;
+                height: 200px;
+                border-radius: 15px 15px 0 0;
+            }
+            .sticky {
+          position: fixed;
+          top: 0;
+          width: 100%;
+          background-color: black;
+          transition: 1s;
+        
+        }
+        .sticky a{
+            color: blanchedalmond;
+        
+        }
+        .sticky span{
+            color:blanchedalmond
+        }
+            .s ion-icon{width: 120px;
+            height:50px;}
+       
+        </style>
+    </head>
+    <title>menu</title>
+    <body>
+        
+        <div class="menu">
+            <div class="heading" >
+                
+                <h1> GALAXY</h1>
+                <h3> &mdash; MENU &mdash;</h3>
+            
+            <br>
+            </div>
+        <div class="s" id="myHeader">
+            <table width="1510px" style="font-family: 'Courier New', Courier, monospace; text-align: center; letter-spacing: 2px;"cellspacing="0"  >
+                <tr>
+                    <td><a href="home.html"><ion-icon name="home-outline" style="display: inline-block;"></ion-icon></a></td>
+                    <td style="text-decoration:overline"><h2><a href="#starters" style="display: inline-block;">STARTERS</a></h2></td>
+                    <td style="text-decoration:overline"><h2><a href="#soups" style="display: inline-block;">SOUPS AND SHAKES</a></h2></td> 
+                    <td style="text-decoration:overline"><h2><a href="#specials" style="display: inline-block;">SPECIALS</a></h2></td>
+                     <td style="text-decoration:overline"><h2><a href="#desserts" style="display: inline-block;">DESSERTS</a></h2></td>
+                     <td><div class="cart"><a href="cart.html"><Button>CART&nbsp;<span>&nbsp;0</span></a></Button></div></td>
+                </tr>
+            </table>
+        </div>
+       <script>
+       window.onscroll = function() {myFunction()};
+        
+        var s = document.getElementById("myHeader");
+        var sticky = s.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            s.classList.add("sticky");
+          } else {
+            s.classList.remove("sticky");
+          }
+        }
+        function add(){
+            alert("Item added to cart");
+        }
+       </script>
+        <br>
+           
+                <table  cellspacing="20" >
+                    <tr>
+                        <td >
+                <div class="starters" id="starters">
+                    <img src="chicken65.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>CHICKEN 65</h5>
+                        <H5 class="price">₹250</H5>
+                        </div>
+                        <p>Chicken 65 is a spicy, deep-fried starter snack, appetizer, or a full meal served with naan!
+                         It's marinated in yogurt, spices, and curry leaves for 24 hours so it's deeply flavorful </p>
+                       <br><div class="al cart1"> <button onclick="add()">Add to Cart</button></div>
+                 </div>
+             </div>
+            </td>
+            <td>
+             <div class="starters">
+                <img src="chicken_chilli.jpg">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>CHILLI CHICKEN</h5>
+                    <H5 class="price">₹275</H5>
+                    </div>
+                    <p>Chilli chicken is a popular Indo-Chinese dish of chicken of Hakka Chinese heritage. 
+                        Though mainly boneless chicken is used in this dish, some people also use bone-in chicken </p>
+                    <br><div class="al cart2"> <button onclick="add()">Add to Cart</button></div>
+             </div>
+         </div>
+        </td>
+        <td>
+            <div class="starters">
+               <img src="chicken lollipop.jpg">
+           <div class="details">
+               <div class="details-sub">
+                   <h5 >CHICKEN LOLLIPOP</h5>
+                   <H5 class="price">₹275</H5>
+                   </div>
+                   <p >Chicken lollipop is, essentially a frenched chicken winglet, 
+                       wherein the meat is cut loose from the bone end and pushed down creating a lollipop appearance.
+                    </p>
+                        <br><div class="al cart3"> <button onclick="add()">Add to Cart</button></div>
+            </div>
+        </div>
+       </td>
+       <td >
+        <div class="starters">
+           <img src="CHICKEN TIKKA.jpg">
+       <div class="details">
+           <div class="details-sub">
+               <h5 >CHICKEN TIKKA</h5>
+               <H5 class="price">₹250</H5>
+               </div>
+               <p>It is traditionally small pieces of boneless chicken baked using skewers on a brazier called angeethi
+                    or over charcoal after marinating in Indian spices and dahi </p>
+                    <br><div class="al cart4"> <button onclick="add()">Add to Cart</button></div>
+        </div>
+    </div>
+    </td>
+    <td >
+        <div class="starters">
+           <img src="chicken majestic.jpg">
+       <div class="details">
+           <div class="details-sub">
+               <h5 >CHICKEN MAJESTIC</h5>
+               <H5 class="price">₹250</H5>
+               </div>
+               <p>Chicken majestic...a delicious and very popular chicken recipe from hyderabadi cuisine...
+                   extremely soft fried chicken strips tossed in a spicy indo chinese tarka...
+                   the softness  </p>
+                   <br><div class="al cart5"> <button onclick="add()">Add to Cart</button></div>
+        </div>
+    </div>
+    </td>
+    </tr>
+        </table>
+        
+        
+        <table cellspacing="20">
+        <tr>
+            <td>
+                <div class="starters">
+                    <img src="vegmanchurian.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>VEGMANCHURIAN</h5>
+                        <H5 class="price">₹165</H5>
+                        </div>
+                        <p>Manchurian is a class of Indian Chinese dishes made by roughly chopping and deep-frying ingredients such as chicken, cauliflower, prawns, fish, mutton, and paneer</p><br>
+                        <div class="al cart6"> <button onclick="add()">Add to Cart</button></div>
+                 </div>
+             </div>
+            </td>
+            <td>
+                <div class="starters">
+                    <img src="spring rolls.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>SPRING ROLLS</h5>
+                        <H5 class="price">₹150</H5>
+                        </div>
+                        <p> The kind of wrapper, fillings, and cooking technique used, as well as the name, vary considerably within this large area, depending on the region's culture. </p>
+                        <br><div class="al cart7"> <button onclick="add()">Add to Cart</button></div>
+                 </div>
+             </div>
+            </td>
+            <td>
+                <div class="starters">
+                    <img src="paneer 65.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>PANEER 65</h5>
+                        <H5 class="price">₹250</H5>
+                        </div>
+                        <p> Paneer 65 is a spicy Hyderabadi appetizer made with paneer, flour, yogurt, curry leaves and spices. Firstly paneer is batter fried until crisp and made in a delicious way</p>
+                        <br><div class="al cart8"> <button onclick="add()">Add to Cart</button></div>
+                 </div>
+             </div>
+            </td>
+            <td>
+                <div class="starters">
+                    <img src="paneer tikka.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>PANEER TIKKA</h5>
+                        <H5 class="price">₹250</H5>
+                        </div>
+                        <p>Paneer tikka is an Indian dish made from chunks of paneer marinated in spices and grilled in a tandoor. It is a vegetarian alternative to chicken tikka and other meat dishes.</p>
+                        <br><div class="al cart9"> <button onclick="add()">Add to Cart</button></div>
+                 </div>
+             </div>
+            </td>
+            <td>
+                <div class="starters">
+                    <img src="mushroom manchuria.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>MUSHROOM MANCHURIA</h5>
+                        <H5 class="price">₹200</H5>
+                        </div>
+                        <p>Anyone who likes Mushrooms, will love Mushroom Manchurian to its death. It is rich in Vitamin D and mushroom manchurian dry is one of the best ways to gorge </p>
+                        <br><div class="al cart10"> <button onclick="add()">Add to Cart</button></div>
+                 </div>
+             </div>
+            </td>
+        </tr>
+        </table>
+        <hr>
+    <span id="soups"></span><br><br><BR>
+        <p style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color:black;font-weight:400; font-size:70px;text-align: center;background-color: beige;">SOUPS AND SHAKES</p>
+            <table  cellspacing="20" >
+                   
+                <tr>
+                    <td>
+                        <div class="starters">
+                            <img src="tomato-soup-7.jpg">
+                        <div class="details">
+                            <div class="details-sub">
+                                <h5>TOMATO SOUP</h5>
+                                <H5 class="price">₹149</H5>
+                                </div>
+                                <p>Tomato soup is a soup with tomatoes as the primary ingredient.
+                                      It may be smooth in texture,and there are also recipes that include chunks of tomato, cream, chicken or vegetable stock</p>
+                                      <br><div class="al cart11"> <button onclick="add()">Add to Cart</button></div>
+                         </div>
+                     </div>
+                    </td>
+                    <td>
+                        <div class="starters">
+                            <img src="mojito.jpg">
+                        <div class="details">
+                            <div class="details-sub">
+                                <h5>MOJITO</h5>
+                                <H5 class="price">₹149</H5>
+                                </div>
+                                <p>Mojito is a traditional Cuban highball. 
+                                    The cocktail often consists of five ingredients:
+                                     white rum, sugar, lime juice, soda water, and mint. Its combination of sweetness </p>
+                                     <br><div class="al cart12"> <button onclick="add()">Add to Cart</button></div>
+                         </div>
+                     </div>
+                    </td>
+                    <td>
+                        <div class="starters">
+                            <img src="lassi.jpg">
+                        <div class="details">
+                            <div class="details-sub">
+                                <h5>LASSI</h5>
+                                <H5 class="price">₹99</H5>
+                                </div>
+                                <p>Lassi is a regional name for buttermilk, the traditional dahi-based drink in the Indian subcontinent. Lassi is a blend of yogurt, water, spices and sometimes fruit. Namkeen lassi </p>
+                                <br><div class="al cart13"> <button onclick="add()">Add to Cart</button></div>
+                         </div>
+                     </div>
+                    </td>
+                    <td>
+                        <div class="starters">
+                            <img src="ferroro automatic.jpg">
+                        <div class="details">
+                            <div class="details-sub">
+                                <h5>FERRORO AUTOMATIC</h5>
+                                <H5 class="price">₹149</H5>
+                                </div>
+                                <p>Ferrero rocher milk shake recipe is a mouth-watering blend of mass favourite chocolate Ferrero rocher with milk and made into a milk shake.It is well known in north</p>
+                                <br><div class="al cart14"> <button onclick="add()">Add to Cart</button></div>
+                         </div>
+                     </div>
+                    </td>
+                    <td>
+                        <div class="starters">
+                            <img src="pista.jpg">
+                        <div class="details">
+                            <div class="details-sub">
+                                <h5>PISTA</h5>
+                                <H5 class="price">₹199</H5>
+                                </div>
+                                <p> Kesar Pista milkshake is a traditional healthy shake with the nutrients of Saffron and nuts. It is made with soaked Saffron (Kesar). very famous in amrita canteen</p>
+                                <br><div class="al cart15"> <button onclick="add()">Add to Cart</button></div>
+                         </div>
+                     </div>
+                    </td><br>
+                  <tr><td>
+                        <div class="starters">
+                            <img src="strawberry-milkshake.jpg">
+                        <div class="details">
+                            <div class="details-sub">
+                                <h5>STRAWBERRRY</h5>
+                                <H5 class="price">₹79</H5>
+                                </div>
+                                <p>Strawberry milkshake recipe made in two ways  a classic milkshake prepared with milk, and a plant-based vegan shake made with almond milk.It is well known in north</p>
+                                <br><div class="al cart16"> <button onclick="add()">Add to Cart</button></div>
+                         </div>
+                     </div>
+                    </td>
+                    <td>
+                        <div class="starters">
+                            <img src="chicken soup.jpg">
+                        <div class="details">
+                            <div class="details-sub">
+                                <h5>CHICKEN SOUP</h5>
+                                <H5 class="price">₹149</H5>
+                                </div>
+                                <p>Chicken soup is a soup made from chicken. The classic chicken soup consists of a clear chicken broth, often with pieces of chicken or vegetables; carrots,chicken </p>
+                                <br><div class="al cart17"> <button onclick="add()">Add to Cart</button></div>
+                         </div>
+                     </div>
+                    </td>
+                    <td>
+                        <div class="starters">
+                            <img src="mushroom soup.jpg">
+                        <div class="details">
+                            <div class="details-sub">
+                                <h5>MUSHROOM SOUP</h5>
+                                <H5 class="price">₹149</H5>
+                                </div>
+                                <p>Cream of mushroom soup is a simple type of soup where a basic roux is thinned with cream or milk and then mushrooms and/or mushroom broth are added. It is well known in North </p>
+                                <br><div class="al cart18"> <button onclick="add()">Add to Cart</button></div>
+                         </div>
+                     </div>
+                    </td>
+                    <td>
+                        <div class="starters">
+                            <img src="mochi.jpg">
+                        <div class="details">
+                            <div class="details-sub">
+                                <h5>MOCHII</h5>
+                                <H5 class="price">₹149</H5>
+                                </div>
+                                <p>A delicate, bite-size dessert made with 100% rice flour. This sticky rice dough comes in a variety of forms all made by hand.It is well known in north America </p>
+                                <br><div class="al cart19"> <button onclick="add()">Add to Cart</button></div>
+                         </div>
+                     </div>
+                    </td>
+                    <td>
+                        <div class="starters">
+                            <img src="rose-milk.jpg">
+                        <div class="details">
+                            <div class="details-sub">
+                                <h5>ROSE MILK</h5>
+                                <H5 class="price">₹99</H5>
+                                </div>
+                                <p>Rose Milk is a cooling and refreshing drink made with chilled milk and rose syrup. It is the best summer drink to quench your thirst in this. It is well known in north</p>
+                                <br><div class="al cart20"> <button onclick="add()">Add to Cart</button></div>
+                         </div>
+                     </div>
+                    </td>
+                </tr>
+            
+                </table>
+                <hr>
+            
+                <span id="specials"></span><br><br><BR>
+                    <p style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color:black;font-weight:400; font-size:70px;text-align: center;background-color: beige;">SPECIALS</p>
+    
+                    <table  cellspacing="20">
+                        <tr>
+                            <td >
+                    <div class="specials">
+                        <img src="falooda.jpg">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5>FALOODA ICECREAM</h5>
+                            <H5 class="price">₹110</H5>
+                            </div>
+                            <p>A falooda a cold dessert made with noodles.Traditionally it is made by mixing rose syrup, vermicelli, and sweet basil seeds with milk, often served with ice cream.</p>
+                            <br><div class="al cart21"> <button onclick="add()">Add to Cart</button></div>
+                     </div>
+                 </div>
+                </td>
+                <td>
+                 <div class="specials">
+                    <img src="chhole bhature.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>CHHOLE BHATURE</h5>
+                        <H5 class="price">₹105</H5>
+                        </div>
+                        <p>Since people love their spicy food, they like to include it in their diet anytime they desire. The crispy puffed Bhatura, when combined with hot, spicy and tangy chole curry </p>
+                        <br><div class="al cart22"> <button onclick="add()">Add to Cart</button></div>
+                 </div>
+             </div>
+            </td>
+            <td>
+                <div class="specials">
+                   <img src="masala chai.jpg">
+               <div class="details">
+                   <div class="details-sub">
+                       <h5>MASALA CHAI</h5>
+                       <H5 class="price">₹50</H5>
+                       </div>
+                       <p>Masala chai is an Indian tea beverage made by boiling black tea in milk and water with a mixture of aromatic herbs and spices. Make a way to taste it and enjoy</p>
+                       <br><div class="al cart23"> <button onclick="add()">Add to Cart</button></div>
+                </div>
+            </div>
+           </td>
+           <td >
+            <div class="specials">
+               <img src="panipuri.jpg">
+           <div class="details">
+               <div class="details-sub">
+                   <h5 >PANI PURI</h5>
+                   <H5 class="price">₹50</H5>
+                   </div>
+                   <p>India loves these small, satisfying snacks because they fill the perfect hunger moment, that is to say early evening, when lunch is a distant memory and dinner  </p>
+                   <br><div class="al cart24"> <button onclick="add()">Add to Cart</button></div>
+            </div>
+        </div>
+        </td>
+        <td>
+            <div class="specials">
+               <img src="Chole Pindi.jpg">
+           <div class="details">
+               <div class="details-sub">
+                   <h5>PINDI CHANNA</h5>
+                   <H5 class="price">₹50</H5>
+                   </div>
+                   <p>This hearty, healthy, protein-packed dish, is straight out of the heart of Punjab in North India. It is named Pindi Chana after the town where it originated—Rawalpindi  </p>
+                   <br><div class="al cart25"> <button onclick="add()">Add to Cart</button></div>
+            </div>
+        </div>
+        </td>
+        
+            </tr>
+            <tr>
+                <td>
+                    <div class="specials">
+                        <img src="pizza.jpg">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5>PIZZA</h5>
+                            <H5 class="price">₹399</H5>
+                            </div>
+                            <p>Pizza is popular due to its simplicity of preparation. If there is any other food easier to prepare and healthy, pizza tops that list. Pizza is made with some fresh vegetables that make it helpful</p>
+                            <br><div class="al cart26"> <button onclick="add()">Add to Cart</button></div>
+                     </div>
+                 </div>
+                </td>
+                <td>
+                    <div class="specials">
+                        <img src="Biryani.jpg">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5>BIRYANI</h5>
+                            <H5 class="price">₹599</H5>
+                            </div>
+                            <p>Biryani is a mixed rice dish originating among the Muslims of the Indian subcontinent. It is made with Indian spices, rice, and a meat form. Vegetarian versions of the dish replace</p>
+                            <br><div class="al cart27"> <button onclick="add()">Add to Cart</button></div>
+                     </div>
+                 </div>
+                </td>
+                <td>
+                    <div class="specials">
+                        <img src="paneerr.jpg">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5>PANEER BUTTER MASALA</h5>
+                            <H5 class="price">₹125</H5>
+                            </div>
+                            <p>paneer butter masala is rich and creamy made of butter, paneer, onions, tomatoes, cashew and spice powders, and herbs. adding a fresh and generous </p>
+                            <br><div class="al cart28"> <button onclick="add()">Add to Cart</button></div>
+                     </div>
+                 </div>
+                </td>
+                <td>
+                    <div class="specials">
+                        <img src="pasta.jpg">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5>BUTTER PASTA</h5>
+                            <H5 class="price">₹140</H5>
+                            </div>
+                            <p>Pasta is made from grain, one of the basic food groups in a healthy diet that also can include vegetables, fruits, fish, and poultry.  too, if it's made from whole grain.</p>
+                            <br><div class="al cart29"> <button onclick="add()">Add to Cart</button></div>
+                     </div>
+                 </div>
+                </td>
+                <td>
+                    <div class="specials">
+                        <img src="butter naun.jpg">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5>BUTTER NAAN</h5>
+                            <H5 class="price">₹135</H5>
+                            </div>
+                            <p>Naan is a leavened flatbread mosty cooked in a tandoor.It is oneof the most ordered fatbreads in India and is eaten with a curry or dal .It's a good source of energy </p>
+                            <br><div class="al cart30"> <button onclick="add()">Add to Cart</button></div>
+                     </div>
+                 </div>
+                </td>
+            </tr>
+            </table>
+                <hr>
+            <span id="desserts"></span><br><br><BR>
+                <p style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color:black;font-weight:400; font-size:60px;text-align: center;background-color: beige;">DESSERTS</p>
+                <table  cellspacing="20">
+                    <tr>
+                        <td >
+                <div class="desserts">
+                    <img src="brulee.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>BRULEE</h5>
+                        <H5 class="price">₹599</H5>
+                        </div>
+                        <p>Brulee, a dessert that simply radiates indulgence, refinement, and simplicity. At first glance, it would appear to be the quintessential French dessert. After all its name is French</p>
+                        <br><div class="al cart31"> <button onclick="add()">Add to Cart</button></div>
+                                 </div>
+             </div>
+            </td>
+            <td>
+             <div class="desserts">
+                <img src="mochii.jpg">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>MOCHI</h5>
+                    <H5 class="price">₹135</H5>
+                    </div>
+                    <p>On its own, mochi tastes like rice but has a sticky, stretchy, soft, and chewy texture. However, mochi is very versatile with endless flavor possibilities</p>
+                   <br> <div class="al cart32"> <button onclick="add()">Add to Cart</button></div>
+             </div>
+         </div>
+        </td>
+        <td>
+            <div class="desserts">
+               <img src="nanaimo bar.jpg">
+           <div class="details">
+               <div class="details-sub">
+                   <h5>NANAIMO BAR</h5>
+                   <H5 class="price">₹99</H5>
+                   </div>
+                   <p>The Nanaimo bar is a no-bake dessert bar that traditionally consists of three layers: a graham wafer crumb and shredded coconut base, custard-flavoured butter icing in the middle</p>
+                   <br><div class="al cart33"> <button onclick="add()">Add to Cart</button></div>
+            </div>
+        </div>
+       </td>
+       <td >
+        <div class="desserts">
+           <img src="gulab jamuns.jpg">
+       <div class="details">
+           <div class="details-sub">
+               <h5>GULAB JAMUN</h5>
+               <H5 class="price">₹210</H5>
+               </div>
+               <p>Gulab jamun is an Indian dessert of fried dough balls that are soaked in a sweet, sticky sugar syrup. As per tradition, the syrup has a delicate rose flavour: Gulab means 'rose water'.</p>
+               <br><div class="al cart34"> <button onclick="add()">Add to Cart</button></div>
+        </div>
+    </div>
+    </td>
+    <td >
+        <div class="desserts">
+           <img src="pakhlava.jpg">
+       <div class="details">
+           <div class="details-sub">
+               <h5>PAKHALAVA</h5>
+               <H5 class="price">₹159</H5>
+               </div>
+               <p>Paklava is made of layers of filo dough with cinnamon-scented walnuts in the middle. After it's baked, honey is poured over it for the filo to soak up. It's quite a sweet dessert </p>
+               <br><div class="al cart35"> <button onclick="add()">Add to Cart</button></div>
+        </div>
+    </div>
+    </td>
+    
+        </tr>
+        <tr>
+            <td>
+                <div class="desserts">
+                    <img src="Brownie.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>BROWNIE</h5>
+                        <H5 class="price">₹699</H5>
+                        </div>
+                        <p>A chocolate brownie or simply a brownie is a square or rectangular chocolate baked confection. Brownies come in a variety of forms and may be either fudgy or cakey</p>
+                        <br><div class="al cart36"> <button onclick="add()">Add to Cart</button></div>
+                 </div>
+             </div>
+            </td>
+            <td>
+                <div class="desserts">
+                    <img src="Charlotte Cake.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>CHARLOTTE CAKE</h5>
+                        <H5 class="price">₹799</H5>
+                        </div>
+                        <p>On those days, the Charlotte was filled with apple compote and topped with bread crumbs. What is this? Later, the legendary French chef Marie-Antonin Carême created a no-bake </p>
+                        <br><div class="al cart37"> <button onclick="add()">Add to Cart</button></div>
+                 </div>
+             </div>
+            </td>
+            <td>
+                <div class="desserts">
+                    <img src="hot mik.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>HOT MILK</h5>
+                        <H5 class="price">₹249</H5>
+                        </div>
+                        <p>"Hot milk cake" is a classic, old fashioned cake from the Mid-Atlantic region. It gets its slightly quirky name from the technique of warming up butter and milk together </p>
+                        <br><div class="al cart38"> <button onclick="add()">Add to Cart</button></div>
+                 </div>
+             </div>
+            </td>
+            <td>
+                <div class="desserts">
+                    <img src="rose cookies.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>ROSE COOKIES</h5>
+                        <H5 class="price">₹140</H5>
+                        </div>
+                        <p>Rose milk tres leches cake is a soft, spongy and scrumptious rose milk cake prepared by soaking rose flavored cake in sweetened rich rose milk mixture</p>
+                        <br><div class="al cart39"> <button onclick="add()">Add to Cart</button></div>
+                 </div>
+             </div>
+            </td>
+            <td>
+                <div class="desserts">
+                    <img src="JILABEI.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>JALEBIS</h5>
+                        <H5 class="price">₹50</H5>
+                        </div>
+                        <p>Jalebis are Indian desserts made by deep-frying a wheat flour (maida flour) batter in pretzel or circular shapes, which are then soaked in sugar syrup. They can be served warm or cold </p>
+                        <br><div class="al cart40"> <button onclick="add()">Add to Cart</button></div>
+                 </div>
+             </div>
+            </td>
+        </tr>
+        </table>
+            </div>
+            
+        
+<script src="main.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+       
+    </body>
+</html>

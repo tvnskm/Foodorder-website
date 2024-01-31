@@ -1,0 +1,258 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+   function validate()
+            {
+                var emailId=[];
+                var email=form.email.value;
+            emailId=document.getElementById('email_id').value;
+            var var3=emailId.lastIndexOf('@');
+            if(email==""){
+            alert("please enter email address");}
+            else{
+            if(emailId.lastIndexOf('@')==-1){
+            alert("Email should contain @ symbol");
+            
+            }if(emailId.lastIndexOf('.')==-1){
+                alert("Email should contain a dot");
+            }
+            if(emailId.lastIndexOf('@')>emailId.lastIndexOf('.'))
+            alert('Please enter a valid email');}
+            }
+</script>
+<style>
+ body{
+      background-image: url("BGG.jpeg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;  
+      background-size: cover;
+      margin: 0px;
+      padding: 0px;
+}
+     
+
+* {box-sizing: border-box; }
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid peachpuff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid peachpuff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+ cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.heading{ 
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
+      font-weight: bold;
+      width: 100% ; 
+      height: 60px;
+      font-size: 25px;
+      color:rgb(224, 138, 26);
+      text-align: center;
+
+}
+.overlay{
+   background: rgba(0,0,0,0.6);
+   height: 140vh;
+   padding-top: 0%;
+   font-family: Arial, Helvetica, sans-serif;
+
+ }
+                        nav{
+                        width: 100%;
+                        background-color:rgba(0,0,0,0.8) ;
+                        height: 80px;
+                        line-height: 70px;
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 0;
+                    
+                        }
+            
+                    a{
+                        text-decoration: none;
+                        color: aliceblue;
+                        font-size: 20px;
+                        transition: 0.5s all ease;
+                    }
+
+                    .logo a{font-size: 40px;
+                            color: goldenrod;
+                            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                            font-style: oblique;
+                            font-weight: bold;
+                            margin-left: 100px ;}
+                    
+                    ul{
+                        margin: 0px;
+                        margin-right: 100px;
+                    }
+
+                    ul li{
+                        float: left;
+                        padding: 0px 10px;
+                        list-style: none;
+                    }
+                    
+                    ul li a:hover{
+                        color: goldenrod;
+
+                    }
+                    .logo a{font-size: 40px;
+                            color: goldenrod;
+                            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                            font-style: oblique;
+                            font-weight: bold;
+                            margin-left: 100px ;}
+                    
+                    ul{
+                        margin: 0px;
+                        margin-right: 100px;
+                    }
+
+                    ul li{
+                        float: left;
+                        padding: 0px 10px;
+                        list-style: none;
+                    }
+                    
+                    ul li a:hover{
+                        color: goldenrod;
+
+                    }
+                    a ion-icon{width:100px;
+                    height: 50px;}
+                    .sticky {
+          position: fixed;
+          top: 0;
+          width: 100%;
+          background-color: black;
+          transition: 1s;
+        
+        }
+        .sticky a{
+            color: blanchedalmond;
+        
+        }
+        .sticky span{
+            color:blanchedalmond
+        }
+
+</style>
+</head>
+<body>
+  <script>
+     function phone(){
+     if(form.mobileno.value==""){
+                alert("Please enter your phone number");
+            }
+            else if(form.mobileno.value.length!=10){
+                alert("Please enter a valid phone number");
+            }
+            else if(form.mobileno.value.charAt(0)!=='7' && form.mobileno.value.charAt(0)!=='8' && form.mobileno.value.charAt(0)!=='9' && form.mobileno.value.charAt(0)!=='6'){
+                alert("Please enter a valid phone number");
+            }
+          }
+  </script>
+
+<div class="header" id="myHeader">
+  <nav>
+      <div class="logo"> 
+       <a href="home.html">GALAXY</a>
+      </div>
+      <ul>
+          <li><a href="aboutus.html">ABOUT US</a></li>
+          <li><a href="menu.html"> MENU</a></li>
+          <li><a href="contactus.html.HTML">CONTACT</a></li>
+          <li><a href="signup.html">SIGN UP</a></li>
+          
+      </ul>
+  </nav>
+</div>
+  <div class="overlay">
+    <div class="heading"><h1>CONTACT US</h1></div>
+    <p style="font-weight: bold; color:rgb(224, 138, 26)">Find us at Galaxy@gmail.com or call us at 55003-788995 </p>
+
+<h3 style="color:rgb(237, 230, 220) "> Contact Form </h3>
+
+<div class="container">
+  <form id="form" onsubmit="confirm('Are you sure you want to submit ?')">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email_id" placeholder="Email id" required>
+    <label for="mobileno">Mobile no</label>
+    <input type="text" name="mobileno" minlength="10" maxlength="10" id="mobileno" placeholder="Mobile no" required>
+    
+    
+    <label for="city">City</label>
+    <input type="text" name="City" id="City" placeholder="City" required>
+
+
+   <label for="Message">Subject</label>
+    <textarea id="Message" name="Message" placeholder="Write something.." style="height:200px"></textarea required> 
+
+    <input type="submit" value="Submit"onclick="validate();phone()">
+  </form>
+</div>
+<center>
+    <h3 style="color:rgb(207, 153, 83)">You can always share your experience about us at </h3>
+    <a href="https://facebook.com"><ion-icon name="logo-facebook"></ion-icon></a>
+    <a href="https://linkedIn.com"><ion-icon name="logo-linkedin"></ion-icon></a>
+    <a href="https://instagram.com"><ion-icon name="logo-instagram"></ion-icon></a>
+</center>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+  window.onscroll = function() {myFunction()};
+   
+   var s = document.getElementById("myHeader");
+   var sticky = s.offsetTop;
+   
+   function myFunction() {
+     if (window.pageYOffset > sticky) {
+       s.classList.add("sticky");
+     } else {
+       s.classList.remove("sticky");
+     }
+   }
+  </script>
+</body></div>
+
+</html>

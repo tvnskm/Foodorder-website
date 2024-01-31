@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" >
+        
+            
+        <style>
+            *{margin: 0;
+            padding: 5px;
+             box-sizing: border-box;
+            }
+            
+            h1{ background-color: lightcoral;
+                color: white;
+                font-size: 50px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                text-align: center;
+    
+                
+            }
+            .M{
+                color: firebrick;
+                font-size: 20px;
+                margin: 20px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                text-align: center;
+                }
+            body
+            {background-image: url("TT.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            align-items: center;
+            
+            
+            }
+            .mandatory{width: 400px;
+                         height: 400px;
+                         margin: auto;
+                         background-color: lavenderblush;
+                        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                        font-size: 20px;
+                        padding: 5px;
+                        margin-bottom: 20px;
+                        text-align: center;
+                        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+                        }
+            .f{          width: 400px;
+                         height: 400px;
+                        font-size: 20px;
+                        background-color: lavenderblush;
+                        margin: auto;
+                        margin-bottom: 20px;
+                        text-align: center;
+                        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+                        
+                        }
+                        
+                            
+                        .btn {
+                            background-color: green;
+                             color: white;
+                            padding: 12px;
+                            margin: 10px 0;
+                            border: none;
+                            width: 10%;
+                            border-radius: 3px;
+                            cursor: pointer;
+                             font-size: 17px;
+                             position: absolute;
+                            top: 35em;
+                            left: 40em;
+                        }
+                            
+                            .f{position: absolute;
+                        top: 9em;
+                    right: 19.5em;}
+                    .mandatory{position: absolute;
+                    top: 9em;
+                left: 17em}
+        </style>
+    </head>
+        <form id="form1">
+                <h1> PAYMENT FORM</h1>
+    <body>
+       <div class="M"> <h3>Mandatory field is represented as *</h3></div>
+       
+        <div class="f"><h2 align="center">PAYMENT DETAILS</h2><br>
+        <p >CARD TYPE <span style="color:red">*</span>:
+        <select name="card_type" id="card_type" style="padding-left:20px;padding-right:20px;" required>
+            <option value="">Select a card type</option>
+            <option value="Mastro">Mastro</option>
+            <option value="Rupay">Rupay</option>
+            <option value="visa">visa</option>
+        </select>
+        </p><br>
+        <p align="center">
+            Card Number  <span style="color:red">*</span>:<input type="number"  name="card_number" placeholder="Card Number" required class="name" min="0000000000000000"max="9999999999999999" >
+        </p><br>
+        <p align="center">
+         EXPIRATION DATE <span style="color:red">*</span>: <input style="width:55px" type="number" name="Exp_date1" id="Exp_date1" max=12 placeholder="MM" required> / <input type="number" style="width:70px" name="Exp_date2" id="Exp_date2" maxlength="4" placeholder="YYYY" required>
+        </p><br>
+        <p align="center">
+        CVV <span style="color:red">*</span>: <input type="password" name="cvv" id="cvv"  required maxlength="3" minlength="3">
+        </p><br>
+       
+    </form>
+    </div>
+    <div class="paynow">
+        <p align="center" ><form  ><input type="submit" value="Paynow" class="btn" onclick="validate() "></p></form>
+    </div>
+    <div class="mandatory"> <h2>CONTACT </h2><br>
+      <form id="form"> <p>NAME <span style="color:red">*</span>: <input type="text" name="fname" required></p><br>
+        <p align="right">ADDRESS<span style="color:red">*</span>: <textarea name="address" minlength="50" id="address" cols="30" rows="5" required></textarea></p><br>
+        <p align="center">MAIL <span style="color:red">*</span>:<input type="email" name="email" id="email_id" required></p>
+        <p id="form2"></p>
+        <p align="center">PINCODE <span style="color:red">*</span>: <input type="tel" minlength="6"  maxlength="6" name="pincode" id="pincode" required></p>
+    </form> 
+    </div>
+    <script>
+
+
+        function validate()
+                    {   var isValid = true;
+                        var emailId=[];
+                        var cnt=0;
+                    emailId=document.getElementById('email_id').value;
+                    var var3=emailId.lastIndexOf('@');
+        
+                    if(form.fname.value==""){
+                        var isValid = false;
+                        alert("Please enter your name");
+                    cnt=1;}
+                    var email=form.email.value;
+                    atpos=email.indexOf("@");
+                    dotpos=email.lastIndexOf(".");
+                    if(email==""){
+                        var isValid = false;
+                        alert("Please enter your email ID");
+                    cnt=1;}
+                    else if(atpos<1 || dotpos-atpos<2){
+                        var isValid = false;
+                        alert("Please Enter a valid email");
+                        cnt=1;
+                    document.getElementById('form2').innerHTML="<span style='color:red;font-size:15px'>Enter a valid mail</span>"
+                }
+                if(form.pincode.value==""){
+                    var isValid = false;
+                        alert("Please enter pincode");
+                        cnt=1;
+                    if(form.pincode.value.length!=6)
+                    var isValid = false;
+                    alert("Please enter valid pincode");
+                    cnt=1;}
+                        if(form1.card_type.value==""){
+                            var isValid = false;
+                        alert("Please enter your cardtype");
+                        cnt=1;
+                    }
+                        if(form1.card_number.value==""){
+                            var isValid = false;
+                        alert("Please enter your cardnumber");
+                        cnt=1;
+                    if(form1.card_number.value.length !=16){
+                        alert("Please enter correct cardnumber");
+                        cnt=1;
+                    }}
+
+                        
+                        var var1=new Date();
+                        var month=var1.getMonth();
+                        var year=var1.getFullYear();
+                        var i=document.getElementById('Exp_date1').value;
+                        var i1=document.getElementById('Exp_date2').value;
+                        if(form1.Exp_date1.value=="" && form1.Exp_date2.value==""){
+                            var isValid = false;
+                        alert("Please enter the exp date");
+                        cnt=1;}
+                    else if(year>i1 || (year==i1 && month>i)){
+                        var isValid = false;
+                        alert('Please enter a valid date');
+                        cnt=1;
+                        }  
+                        if(form1.cvv.value==""){
+                            var isValid = false;
+                        alert("Please enter the cvv number ");
+                        cnt=1;}
+        
+        
+                    
+                 if(cnt==0){
+                    window.open("sucseed.html");
+                 }
+        
+                        }
+        
+                    </script>
+    </body>
+</html>
